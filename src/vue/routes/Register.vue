@@ -19,6 +19,7 @@
                 type="text"
                 v-model="username"
                 placeholder="Username"
+                data-cy="signup-username"
               />
             </fieldset>
             <fieldset class="form-group">
