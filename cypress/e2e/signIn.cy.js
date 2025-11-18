@@ -35,12 +35,12 @@ describe('Sign In page', () => {
 
     cy.task('generateUser').then((generateUser) => {
       nonRegisteredUser = generateUser;
+
+      signInPage.typeEmail(nonRegisteredUser.email);
+      signInPage.typePassword(nonRegisteredUser.password);
+      signInPage.clickSignInBtn();
+
+      cy.get('.login-failed').should('be.visible');
     });
-
-    signInPage.typeEmail(nonRegisteredUser.email);
-    signInPage.typePassword(nonRegisteredUser.password);
-    signInPage.clickSignInBtn();
-
-    cy.get('.login-failed').should('be.visible');
   });
 });
