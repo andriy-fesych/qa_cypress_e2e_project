@@ -82,9 +82,6 @@ export default {
       "user",
     ])
   },
-  mounted() {
-    console.log("Settings.vue mounted!");
-  },
   methods: {
     updateSettings() {
       swal({

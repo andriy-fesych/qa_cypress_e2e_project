@@ -11,7 +11,7 @@ class ArticlePage {
   editBtn = () => cy.get('[data-cy=article-edit]').first();
   deleteBtn = () => cy.get('[data-cy=article-delete]').first();
 
-  createArticle({ title, description, body, tag }) {
+  createArticle({ title, description, body }) {
     this.titleInput().type(title);
     this.descriptionInput().type(description);
     this.bodyInput().type(body);

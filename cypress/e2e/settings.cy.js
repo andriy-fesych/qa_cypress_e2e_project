@@ -67,8 +67,6 @@ describe('Settings page', () => {
 
     settingsPage.updatePassword(newPass);
 
-    settingsPage.submitBtn().click();
-
     cy.url().should('include', `/profile/${user.username}`);
 
     user.password = newPass;
@@ -80,7 +78,6 @@ describe('Settings page', () => {
     signInPage.typeEmail(user.email);
     signInPage.typePassword(user.password);
     signInPage.clickSignInBtn();
-
 
     homePage.assertHeaderContainUsername(user.username);
   });
